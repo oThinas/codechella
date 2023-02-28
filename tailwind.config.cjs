@@ -6,7 +6,10 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      screens: { xl: '1440px' },
+      padding: { 30: '7.5rem' },
+    },
     fontSize: {
       base: ['1.25rem', '1.75rem'],
       lg: ['2rem', '2.5rem'],

@@ -23,6 +23,7 @@ export function ToggleThemeButton() {
   return (
     <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
       {theme === 'dark' ? <SunIcon width={24} height={24} color='#FFF' /> : <MoonIcon width={24} height={24} color='#FFF'/>}
+      <span className='sr-only'>Mudar tema</span>
     </button>
   );
 }
