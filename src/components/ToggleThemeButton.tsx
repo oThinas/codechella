@@ -1,27 +1,13 @@
-import { useState, useEffect } from 'react';
 import { MoonIcon, SunIcon } from '@radix-ui/react-icons';
+import { useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
+
 
 export function ToggleThemeButton() {
-  const [theme, setTheme] = useState('light');
-
-  useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  }, []);
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [theme]);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <button onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}>
+    <button onClick={() => toggleTheme()}>
       {theme === 'dark' ? <SunIcon width={24} height={24} color='#FFF' /> : <MoonIcon width={24} height={24} color='#FFF'/>}
       <span className='sr-only'>Mudar tema</span>
     </button>

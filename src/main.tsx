@@ -7,7 +7,9 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import { App } from './App';
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
+import { ThemeContextProvider } from './contexts/ThemeContext';
 
 import './styles/global.css';
 
@@ -17,7 +19,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Header />
-    <RouterProvider router={router}/>
+    <ThemeContextProvider>
+      <Header />
+
+      <RouterProvider router={router}/>
+
+      <Footer />
+    </ThemeContextProvider>
   </React.StrictMode>
 );

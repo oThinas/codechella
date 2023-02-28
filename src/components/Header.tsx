@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
-import LightLogo from '../../assets/images/LightLogo';
-import { DropdownMenu } from './DropdownMenu';
-import { Text } from './Text';
-import { ToggleThemeButton } from './ToggleThemeButton';
+
+import { DropdownMenu, Logo, Text, ToggleThemeButton } from './components.module';
 
 const menuItems = [
   'A experiência',
@@ -28,7 +26,7 @@ export function Header() {
   return (
     <header className='flex md:flex-col xl:flex-row md:gap-8 items-center justify-between px-6 xl:px-30 py-8 bg-blue dark:bg-blue-dark'>
       <div className='flex md:items-center md:justify-center md:gap-6 w-full xl:w-fit'>
-        <LightLogo />
+        <Logo version='light'/>
         <ToggleThemeButton />
       </div>
       {

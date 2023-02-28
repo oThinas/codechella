@@ -3,6 +3,7 @@
 module.exports = {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
+    './index.html',
   ],
   darkMode: 'class',
   theme: {
@@ -41,6 +42,7 @@ module.exports = {
       },
       grey: {
         light: '#B6BCFF',
+        DEFAULT: '#444444',
         dark: '#304968',
       },
       green: {
