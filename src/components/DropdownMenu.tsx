@@ -32,7 +32,7 @@ export function DropdownMenu(props: IDropdownMenuProps) {
       </Dropdown.Trigger>
 
       <Dropdown.Portal>
-        <Dropdown.Content className='flex flex-col items-center bg-blue-dark text-white'>
+        <Dropdown.Content className='flex flex-col items-center bg-blue dark:bg-blue-dark text-white'>
           {itemsElementStyled}
         </Dropdown.Content>
       </Dropdown.Portal>

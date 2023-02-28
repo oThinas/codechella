@@ -26,7 +26,7 @@ export function Header() {
   window.addEventListener('resize', () => checkMobile());
 
   return (
-    <header className='flex md:flex-col md:gap-8 items-center justify-between px-6 py-8 bg-blue-dark'>
+    <header className='flex md:flex-col md:gap-8 items-center justify-between px-6 py-8 bg-blue dark:bg-blue-dark'>
       <div className='flex md:items-center md:justify-center md:gap-6 w-full'>
         <LightLogo />
         <ToggleThemeButton />
@@ -36,7 +36,7 @@ export function Header() {
           <ul className='flex text-white'>
             {menuItems.map((item, index) => (
               <li key={index}>
-                <Text asChild bold type='body' className='px-8 py-4'>
+                <Text asChild bold type='body' className='px-8 py-4 hover:underline'>
                   <a href='#'>{item}</a>
                 </Text>
               </li>
