@@ -20,10 +20,18 @@ export function Footer() {
           </Text>
 
           <div id='icons' className='flex gap-2 justify-center'>
-            <FaWhatsapp size={32} className='hover:-translate-y-1 transition-transform'/>
-            <FaTwitch size={32} className='hover:-translate-y-1 transition-transform'/>
-            <FaInstagram size={32} className='hover:-translate-y-1 transition-transform'/>
-            <FaTwitter size={32} className='hover:-translate-y-1 transition-transform'/>
+            <a href="https://web.whatsapp.com/">
+              <FaWhatsapp size={32} className='hover:-translate-y-1 transition-transform'/>
+            </a>
+            <a href="https://www.twitch.tv/">
+              <FaTwitch size={32} className='hover:-translate-y-1 transition-transform'/>
+            </a>
+            <a href="https://www.instagram.com/">
+              <FaInstagram size={32} className='hover:-translate-y-1 transition-transform'/>
+            </a>
+            <a href="https://twitter.com/">
+              <FaTwitter size={32} className='hover:-translate-y-1 transition-transform'/>
+            </a>
           </div>
         </div>
       </div>
