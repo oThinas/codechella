@@ -2,29 +2,32 @@
 /* eslint-disable comma-dangle */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from 'react-router-dom';
-import { App } from './App';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
+import { Home } from './pages';
+
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
+
 import { ThemeContextProvider } from './contexts/ThemeContext';
 
 import './styles/global.css';
+import { DeviceContextProvider } from './contexts/DeviceContex';
 
 const router = createBrowserRouter([
-  { path: '/', element: <App /> }
+  { path: '/', element: <Home /> }
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <ThemeContextProvider>
-      <Header />
+      <DeviceContextProvider>
+        <Header />
 
-      <RouterProvider router={router}/>
+        <RouterProvider router={router}/>
 
-      <Footer />
+        <Footer />
+      </DeviceContextProvider>
     </ThemeContextProvider>
   </React.StrictMode>
 );

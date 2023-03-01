@@ -1,6 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useContext } from 'react';
 
-import { DropdownMenu, Logo, Text, ToggleThemeButton } from './components.module';
+import { DropdownMenu, Logo, Text, ToggleThemeButton } from '.';
+
+import { DeviceContext } from '../contexts/DeviceContex';
 
 const menuItems = [
   'A experiência',
@@ -10,18 +12,7 @@ const menuItems = [
 ];
 
 export function Header() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  function checkMobile() {
-    if (window.innerWidth < 768) setIsMobile(true);
-    else setIsMobile(false);
-  }
-
-  useEffect(() => {
-    checkMobile();
-  }, []);
-
-  window.addEventListener('resize', () => checkMobile());
+  const { device } = useContext(DeviceContext);
 
   return (
     <header className='flex md:flex-col xl:flex-row md:gap-8 items-center justify-between px-6 xl:px-30 py-8 bg-blue dark:bg-blue-dark'>
@@ -30,11 +21,11 @@ export function Header() {
         <ToggleThemeButton />
       </div>
       {
-        !isMobile ? (
-          <ul className='flex text-white'>
+        device !== 'mobile' ? (
+          <ul className='flex text-white w-full justify-between xl:max-w-xl'>
             {menuItems.map((item, index) => (
               <li key={index}>
-                <Text asChild bold type='body' className='px-8 py-4 hover:underline'>
+                <Text asChild bold type='body' className='hover:underline'>
                   <a href='#'>{item}</a>
                 </Text>
               </li>

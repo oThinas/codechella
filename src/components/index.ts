@@ -1,3 +1,4 @@
+export { Banner } from './Banner';
 export { DropdownMenu } from './DropdownMenu';
 export { Footer } from './Footer';
 export { Header } from './Header';
