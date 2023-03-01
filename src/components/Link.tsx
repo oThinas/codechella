@@ -11,7 +11,7 @@ interface ILinkProps extends ITextProps, HTMLAttributes<HTMLAnchorElement> {
 
 export function Link({ className, ...props }: ILinkProps) {
   return (
-    <Text asChild className={`hover:underline cursor-pointer ${className}`} {...props}>
+    <Text asChild className={`hover:underline cursor-pointer ${className || ''}`} {...props}>
       <a>
         {props.children}
       </a>
