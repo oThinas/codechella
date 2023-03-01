@@ -1,13 +1,11 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 import { FaInstagram, FaTwitch, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
 import { ThemeContext } from '../contexts/ThemeContext';
-import { Logo } from './Logo';
-import { Text } from './Text';
+import { Link, Logo, Text } from '.';
 
 export function Footer() {
   const { theme } = useContext(ThemeContext);
-  useEffect(() => console.log('footer theme', theme), [theme]);
 
   return (
     <footer className='flex flex-col xl:flex-row p-6 xl:px-30 xl:py-16 gap-8 items-center xl:justify-between flex-shrink-0 w-full text-grey dark:text-white bg-coral dark:bg-blue-dark'>
@@ -20,18 +18,21 @@ export function Footer() {
           </Text>
 
           <div id='icons' className='flex gap-2 justify-center'>
-            <a href="https://web.whatsapp.com/">
+            <Link href='https://web.whatsapp.com/'>
               <FaWhatsapp size={32} className='hover:-translate-y-1 transition-transform'/>
-            </a>
-            <a href="https://www.twitch.tv/">
+            </Link>
+
+            <Link href='https://www.twitch.tv/'>
               <FaTwitch size={32} className='hover:-translate-y-1 transition-transform'/>
-            </a>
-            <a href="https://www.instagram.com/">
+            </Link>
+
+            <Link href='https://www.instagram.com/'>
               <FaInstagram size={32} className='hover:-translate-y-1 transition-transform'/>
-            </a>
-            <a href="https://twitter.com/">
+            </Link>
+
+            <Link href='https://twitter.com/'>
               <FaTwitter size={32} className='hover:-translate-y-1 transition-transform'/>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
@@ -39,9 +40,9 @@ export function Footer() {
       <div className='text-center xl:text-start xl:flex xl:flex-col'>
         <Text>
           Desenvolvido por&nbsp;
-          <Text asChild className='hover:underline'>
-            <a href='https://github.com.br/oThinas'>Thinas</a>
-          </Text>
+          <Link href='https://github.com.br/oThinas'>
+            Thinas
+          </Link>
           .&nbsp;
         </Text>
         <Text>

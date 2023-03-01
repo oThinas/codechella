@@ -1,15 +1,7 @@
-import { ReactNode } from 'react';
 import { Slot } from '@radix-ui/react-slot';
 import clsx from 'clsx';
 
-interface ITextProps {
-  size?: 20 | 32 | 40 | 48 | 64;
-  type?: 'body' | 'title';
-  bold?: boolean;
-  asChild?: boolean;
-  className?: string;
-  children: ReactNode;
-}
+import { ITextProps } from '../interfaces';
 
 export function Text({ size = 20, type = 'body', ...props }: ITextProps) {
   const Tag = props.asChild ? Slot : 'span';

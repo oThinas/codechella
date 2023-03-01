@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 
-import { DropdownMenu, Logo, Text, ToggleThemeButton } from '.';
+import { DropdownMenu, Link, Logo, ToggleThemeButton } from '.';
 
 import { DeviceContext } from '../contexts/DeviceContex';
 
@@ -25,9 +25,7 @@ export function Header() {
           <ul className='flex text-white w-full justify-between xl:max-w-xl'>
             {menuItems.map((item, index) => (
               <li key={index}>
-                <Text asChild bold type='body' className='hover:underline'>
-                  <a href='#'>{item}</a>
-                </Text>
+                <Link href='#' bold>{item}</Link>
               </li>
             ))}
           </ul>

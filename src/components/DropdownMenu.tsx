@@ -1,6 +1,6 @@
 import * as Dropdown from '@radix-ui/react-dropdown-menu';
 import { HamburgerMenuIcon } from '@radix-ui/react-icons';
-import { Text } from './Text';
+import { Link } from '.';
 
 interface IDropdownMenuProps {
   items: string[];
@@ -8,13 +8,11 @@ interface IDropdownMenuProps {
 
 export function DropdownMenu(props: IDropdownMenuProps) {
   const itemsElement = props.items.map((item, index) => (
-    <Text key={index} asChild bold type='body' className='px-8 py-4'>
-      <a href='#'>
-        <Dropdown.Item className='outline-none'>
-          {item}
-        </Dropdown.Item>
-      </a>
-    </Text>
+    <Link key={index} href='#' bold className='px-8 py-4 cursor-default hover:no-underline'>
+      <Dropdown.Item className='outline-none cursor-pointer'>
+        {item}
+      </Dropdown.Item>
+    </Link>
   ));
 
   const itemsElementStyled = [];
