@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { IoTicketOutline } from 'react-icons/io5';
 
-import { Button, Heading, Paragraph, Text } from '../../../components';
+import { Button, Heading, Paragraph, Section, Text } from '../../../components';
 
 import { ThemeContext } from '../../../contexts/ThemeContext';
 
@@ -12,7 +12,7 @@ export function About() {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <section className='flex flex-col xl:flex-row gap-8 xl:gap-12 px-6 md:px-[60px] xl:px-30 py-8 xl:py-16 justify-center items-center'>
+    <Section>
       <img
         src={theme === 'light' ? AboutLightImage : AboutDarkImage}
         alt={
@@ -38,6 +38,6 @@ export function About() {
           </Text>
         </Button>
       </div>
-    </section>
+    </Section>
   );
 }

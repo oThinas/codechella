@@ -18,7 +18,8 @@ export function Text({ size = 20, type = 'body', ...props }: ITextProps) {
           'font-body': type === 'body',
           'font-title': type === 'title',
           'font-bold': props.bold,
-        }, props.className)
+          'font-extrabold': props.extraBold,
+        }, props?.className)
       }
     >
       {props.children}

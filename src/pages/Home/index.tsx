@@ -1,5 +1,5 @@
 import { Banner } from '../../components';
-import { About } from './Sections';
+import { About, Lineup } from './Sections';
 
 export function Home() {
   return (
@@ -10,6 +10,7 @@ export function Home() {
         dark:from-dark-gradient-start dark:via-dark-gradient-via dark:to-dark-gradient-end'
       >
         <About />
+        <Lineup />
       </main>
     </div>
   );

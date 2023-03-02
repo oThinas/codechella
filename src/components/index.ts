@@ -1,3 +1,4 @@
+export { BandList } from './BandList';
 export { Banner } from './Banner';
 export { Button } from './Button';
 export { DropdownMenu } from './DropdownMenu';
@@ -7,5 +8,6 @@ export { Heading } from './Heading';
 export { Link } from './Link';
 export { Logo } from './Logo';
 export { Paragraph } from './Paragraph';
+export { Section } from './Section';
 export { Text } from './Text';
 export { ToggleThemeButton } from './ToggleThemeButton';
