@@ -29,6 +29,7 @@ module.exports = {
     fontFamily: {
       title: ['Calistoga', 'cursive'],
       body: ['Raleway', 'sans-serif'],
+      logo: ['Freckle Face', 'cursive'],
     },
     colors: {
       white: '#FFF',

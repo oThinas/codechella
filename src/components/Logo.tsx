@@ -1,14 +1,8 @@
-import { ImgHTMLAttributes } from 'react';
+import { twMerge } from 'tailwind-merge';
+import { Link } from '.';
 
-import DarkLogo from '../../assets/images/DarkLogo.png'; // TODO: corrigir a imagem
-import LightLogo from '../../assets/images/LightLogo.png';
-
-export function Logo({ version, ...props }: {  version: 'dark' | 'light' } & ImgHTMLAttributes<HTMLImageElement>) {
+export function Logo({ className }: { className?: string }) {
   return (
-    <img
-      src={version === 'dark' ? DarkLogo : LightLogo}
-      alt='<CodeChellea /> (Logo do CodeChella na versão escura)'
-      {...props}
-    />
+    <Link href='/' className={twMerge(`font-logo text-white hover:no-underline ${className || ''}`)} size={32}>&lt;CodeChella /&gt;</Link>
   );
 }

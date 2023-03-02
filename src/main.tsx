@@ -2,7 +2,7 @@
 /* eslint-disable comma-dangle */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { Home } from './pages';
 
@@ -14,20 +14,20 @@ import { ThemeContextProvider } from './contexts/ThemeContext';
 import './styles/global.css';
 import { DeviceContextProvider } from './contexts/DeviceContex';
 
-const router = createBrowserRouter([
-  { path: '/', element: <Home /> }
-]);
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ThemeContextProvider>
-      <DeviceContextProvider>
-        <Header />
+    <BrowserRouter>
+      <ThemeContextProvider>
+        <DeviceContextProvider>
+          <Header />
 
-        <RouterProvider router={router}/>
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
 
-        <Footer />
-      </DeviceContextProvider>
-    </ThemeContextProvider>
+          <Footer />
+        </DeviceContextProvider>
+      </ThemeContextProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
