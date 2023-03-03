@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 import { ITextProps } from '../interfaces';
 
-export function Text({ size = 20, type = 'body', ...props }: ITextProps) {
+export function Text({ size = 20, font = 'body', ...props }: ITextProps) {
   const Tag = props.asChild ? Slot : 'span';
 
   return (
@@ -15,8 +15,8 @@ export function Text({ size = 20, type = 'body', ...props }: ITextProps) {
           'text-xl': size === 40,
           'text-2xl': size === 48,
           'text-3xl': size === 64,
-          'font-body': type === 'body',
-          'font-title': type === 'title',
+          'font-body': font === 'body',
+          'font-title': font === 'title',
           'font-bold': props.bold,
           'font-extrabold': props.extraBold,
         }, props?.className)

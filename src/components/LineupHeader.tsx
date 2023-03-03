@@ -12,7 +12,7 @@ export function LineupHeader({ children }: { children: ReactNode }) {
       <div className='flex-1 h-0.5 bg-coral-dark dark:bg-green-dark hidden md:block rounded-lg'/>
       <Text
         size={device === 'mobile' ? 32 : 48}
-        type='title'
+        font='title'
         className='uppercase text-white bg-coral-dark dark:bg-green-dark px-2 py-4'
       >
         {children}

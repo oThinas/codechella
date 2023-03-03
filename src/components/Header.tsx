@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className='flex md:flex-col xl:flex-row md:gap-8 items-center justify-between px-6 xl:px-30 py-8 bg-blue dark:bg-blue-dark'>
-      <div className='flex md:items-center md:justify-center md:gap-6 w-full xl:w-fit'>
+      <div className='flex md:items-center md:justify-center gap-6 w-full xl:w-fit'>
         <Logo />
         <ToggleThemeButton />
       </div>

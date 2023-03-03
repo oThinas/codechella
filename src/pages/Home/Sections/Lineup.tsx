@@ -5,7 +5,7 @@ import { bandsDays } from '../../../utils/bandsDays';
 export function Lineup() {
   return (
     <Section className='gap-12 py-12 xl:flex-col'>
-      <Heading heading='h2' bold size={48} type='title' className='text-grey dark:text-white mb-6'>
+      <Heading heading='h2' bold size={48} font='title' className='text-grey dark:text-white mb-6'>
         /Line-Up/
       </Heading>
 
