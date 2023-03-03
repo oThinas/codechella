@@ -1,25 +1,19 @@
-import { useContext } from 'react';
 import { IoTicketOutline } from 'react-icons/io5';
 
-import { Button, Heading, Paragraph, Section, Text } from '../../../components';
-
-import { ThemeContext } from '../../../contexts/ThemeContext';
+import { Button, Heading, Image, Paragraph, Section, Text } from '../../../components';
 
 import AboutLightImage from '../../../../assets/images/about-light.jpg';
 import AboutDarkImage from '../../../../assets/images/about-dark.jpg';
 
 export function About() {
-  const { theme } = useContext(ThemeContext);
-
   return (
     <Section>
-      <img
-        src={theme === 'light' ? AboutLightImage : AboutDarkImage}
-        alt={
-          theme === 'light' ?
-            '5 pessoas em uma plateia de um festival de músicas' :
-            'Um palco com luzes de néon e 3 homens tocando guitarra'
-        }
+      <Image
+        source={{ light: AboutLightImage, dark: AboutDarkImage }}
+        desc={{
+          light: '5 pessoas em uma plateia de um festival de músicas',
+          dark: 'Um palco com luzes de néon e 3 homens tocando guitarra',
+        }}
         className='w-full max-w-[610px] h-96 object-cover rounded-2xl'
       />
 

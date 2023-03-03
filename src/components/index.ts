@@ -5,6 +5,7 @@ export { DropdownMenu } from './DropdownMenu';
 export { Footer } from './Footer';
 export { Header } from './Header';
 export { Heading } from './Heading';
+export { Image } from './Image';
 export { LineupHeader } from './LineupHeader';
 export { Link } from './Link';
 export { Logo } from './Logo';
