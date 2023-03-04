@@ -1,11 +1,10 @@
+import clsx from 'clsx';
 import { useContext } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 import { Heading } from '.';
 
 import { DeviceContext } from '../contexts/DeviceContex';
-
-import { generateBackgroundStyles } from '../utils';
 
 import { IFilter } from '../interfaces/IFilter';
 
@@ -18,12 +17,13 @@ interface IBannerProps {
 
 export function Banner(props: IBannerProps) {
   const { device } = useContext(DeviceContext);
-  const source: { [key: string]: string } = generateBackgroundStyles(props.source);
 
   return (
     <div
-      className={twMerge(`h-[270px] md:h-[384px] xl:h-[407px] bg-cover text-center flex items-center justify-center
-      ${source[props.source]} ${props.className || ''}`)}
+      className={twMerge(clsx('h-[270px] md:h-[384px] xl:h-[407px] bg-cover text-center flex items-center justify-center', {
+        'bg-home-banner': props.source === 'home',
+        'bg-experience-banner': props.source === 'experience',
+      }, props.className || ''))}
     >
       <Heading
         heading='h1'

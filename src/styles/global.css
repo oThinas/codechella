@@ -2,3 +2,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .bg-home-banner {
+    @apply
+    bg-home-banner-mobile-light
+    md:bg-home-banner-tablet-light
+    xl:bg-home-banner-desktop-light
+
+    dark:bg-home-banner-mobile-dark
+    dark:md:bg-home-banner-tablet-dark
+    dark:xl:bg-home-banner-desktop-dark
+  }
+
+  .bg-experience-banner {
+    @apply
+    bg-experience-banner-mobile
+    md:bg-experience-banner-tablet
+    xl:bg-experience-banner-desktop
+  }
+}

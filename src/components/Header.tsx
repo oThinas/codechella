@@ -5,10 +5,10 @@ import { DropdownMenu, Link, Logo, ToggleThemeButton } from '.';
 import { DeviceContext } from '../contexts/DeviceContex';
 
 const menuItems = [
-  'A experiência',
-  'Mapa de Setores',
-  'Informações',
-  'Ingresso',
+  { label: 'A experiência', href: '/experiencia' },
+  { label: 'Mapa de Setores', href: '#' },
+  { label: 'Informações', href: '#' },
+  { label: 'Ingresso', href: '#' },
 ];
 
 export function Header() {
@@ -25,7 +25,7 @@ export function Header() {
           <ul className='flex text-white w-full justify-between xl:max-w-xl'>
             {menuItems.map((item, index) => (
               <li key={index}>
-                <Link href='#' bold>{item}</Link>
+                <Link href={item.href} bold>{item.label}</Link>
               </li>
             ))}
           </ul>

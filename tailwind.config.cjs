@@ -17,6 +17,10 @@ module.exports = {
         'home-banner-mobile-dark': 'url(/home-banner-mobile-dark.png)',
         'home-banner-tablet-dark': 'url(/home-banner-tablet-dark.png)',
         'home-banner-desktop-dark': 'url(/home-banner-desktop-dark.png)',
+
+        'experience-banner-mobile': 'url(/experience-banner-mobile.png)',
+        'experience-banner-tablet': 'url(/experience-banner-tablet.png)',
+        'experience-banner-desktop': 'url(/experience-banner-desktop.png)',
       },
     },
     fontSize: {

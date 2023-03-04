@@ -3,14 +3,14 @@ import { HamburgerMenuIcon } from '@radix-ui/react-icons';
 import { Link } from '.';
 
 interface IDropdownMenuProps {
-  items: string[];
+  items: { label: string, href: string }[];
 }
 
 export function DropdownMenu(props: IDropdownMenuProps) {
   const itemsElement = props.items.map((item, index) => (
-    <Link key={index} href='#' bold className='px-8 py-4 cursor-default hover:no-underline'>
+    <Link key={index} href={item.href} bold className='px-8 py-4 cursor-default hover:no-underline'>
       <Dropdown.Item className='outline-none cursor-pointer'>
-        {item}
+        {item.label}
       </Dropdown.Item>
     </Link>
   ));

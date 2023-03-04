@@ -9,6 +9,7 @@ export { Image } from './Image';
 export { LineupHeader } from './LineupHeader';
 export { Link } from './Link';
 export { Logo } from './Logo';
+export { Main } from './Main';
 export { Paragraph } from './Paragraph';
 export { Section } from './Section';
 export { Text } from './Text';
