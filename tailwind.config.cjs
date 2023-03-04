@@ -11,12 +11,12 @@ module.exports = {
       screens: { xl: '1440px' },
       padding: { 30: '7.5rem' },
       backgroundImage: {
-        'banner-mobile-light': 'url(/mobile-banner-light.png)',
-        'banner-tablet-light': 'url(/tablet-banner-light.png)',
-        'banner-desktop-light': 'url(/desktop-banner-light.png)',
-        'banner-mobile-dark': 'url(/mobile-banner-dark.png)',
-        'banner-tablet-dark': 'url(/tablet-banner-dark.png)',
-        'banner-desktop-dark': 'url(/desktop-banner-dark.png)',
+        'home-banner-mobile-light': 'url(/home-banner-mobile-light.png)',
+        'home-banner-tablet-light': 'url(/home-banner-tablet-light.png)',
+        'home-banner-desktop-light': 'url(/home-banner-desktop-light.png)',
+        'home-banner-mobile-dark': 'url(/home-banner-mobile-dark.png)',
+        'home-banner-tablet-dark': 'url(/home-banner-tablet-dark.png)',
+        'home-banner-desktop-dark': 'url(/home-banner-desktop-dark.png)',
       },
     },
     fontSize: {

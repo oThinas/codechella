@@ -1,6 +1,6 @@
 import { BandList, Heading, LineupHeader, Section } from '../../../components';
 
-import { bandsDays } from '../../../utils/bandsDays';
+import { bandsDays } from '../../../utils';
 
 export function Lineup() {
   return (

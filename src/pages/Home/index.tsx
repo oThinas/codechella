@@ -7,7 +7,7 @@ import FooterDark from '../../../assets/images/footer-dark.jpg';
 export function Home() {
   return (
     <div className='flex-1'>
-      <Banner />
+      <Banner source='home' title='Boas-vindas ao #CodeChella2023!'/>
 
       <main
         className='flex flex-col bg-gradient-to-b from-light-gradient-start via-light-gradient-via to-light-gradient-end
@@ -25,8 +25,8 @@ export function Home() {
           }}
           className='w-full h-[338px] object-cover'
           filter={{
-            light: { color: 'coral-dark', opacity: 30 },
-            dark: { color: 'grey-dark', opacity: 30 },
+            light: { bgColor: 'bg-coral-dark', opacity: 'opacity-30' },
+            dark: { bgColor: 'dark:bg-grey-dark', opacity: 'opacity-50' },
           }}
         />
       </main>

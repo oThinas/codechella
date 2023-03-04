@@ -1,15 +1,29 @@
 import { useContext } from 'react';
+import { twMerge } from 'tailwind-merge';
+
 import { Heading } from '.';
+
 import { DeviceContext } from '../contexts/DeviceContex';
 
-export function Banner() {
+import { generateBackgroundStyles } from '../utils';
+
+import { IFilter } from '../interfaces/IFilter';
+
+interface IBannerProps {
+  title: string;
+  source: 'home' | 'experience';
+  filter?: IFilter;
+  className?: string;
+}
+
+export function Banner(props: IBannerProps) {
   const { device } = useContext(DeviceContext);
+  const source: { [key: string]: string } = generateBackgroundStyles(props.source);
 
   return (
     <div
-      className='h-[270px] md:h-[384px] xl:h-[407px] bg-cover text-center flex items-center justify-center
-      bg-banner-mobile-light md:bg-banner-tablet-light xl:bg-banner-desktop-light
-      dark:bg-banner-mobile-dark dark:md:bg-banner-tablet-dark dark:xl:bg-banner-desktop-dark'
+      className={twMerge(`h-[270px] md:h-[384px] xl:h-[407px] bg-cover text-center flex items-center justify-center
+      ${source[props.source]} ${props.className || ''}`)}
     >
       <Heading
         heading='h1'
@@ -17,7 +31,7 @@ export function Banner() {
         size={device === 'mobile' ? 32 : 64}
         className='text-grey dark:text-white max-w-[542px]'
       >
-        Boas-vindas ao #CodeChella2023!
+        {props.title}
       </Heading>
     </div>
   );
