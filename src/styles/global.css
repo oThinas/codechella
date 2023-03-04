@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
+/* @layer components {
   .bg-home-banner {
     @apply
     bg-home-banner-mobile-light
@@ -21,4 +21,4 @@
     md:bg-experience-banner-tablet
     xl:bg-experience-banner-desktop
   }
-}
+} */
