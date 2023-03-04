@@ -8,11 +8,11 @@ interface IDropdownMenuProps {
 
 export function DropdownMenu(props: IDropdownMenuProps) {
   const itemsElement = props.items.map((item, index) => (
-    <Link key={index} href={item.href} bold className='px-8 py-4 cursor-default hover:no-underline'>
-      <Dropdown.Item className='outline-none cursor-pointer'>
+    <Dropdown.Item  key={index} className='px-8 py-4 outline-none'>
+      <Link href={item.href} bold className='hover:no-underline'>
         {item.label}
-      </Dropdown.Item>
-    </Link>
+      </Link>
+    </Dropdown.Item>
   ));
 
   const itemsElementStyled = [];
