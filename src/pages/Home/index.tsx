@@ -1,4 +1,4 @@
-import { useContext, useEffect } from 'react';
+import { useContext } from 'react';
 
 import { About, Lineup } from './Sections';
 
@@ -19,19 +19,12 @@ import HomeBannerDesktopDark from '../../../assets/images/home-banner-desktop-da
 export function Home() {
   const { device } = useContext(DeviceContext);
 
-  useEffect(() => console.log(device), [device]);
-
-  let light;
-  if (device === 'mobile') light = HomeBannerMobileLight;
-  else if (device === 'tablet') light = HomeBannerTabletLight;
-  else light = HomeBannerDesktopLight;
-
   return (
     <div className='flex-1'>
       <Main>
         <Banner
           source={{
-            light,
+            light: device === 'mobile' ? HomeBannerMobileLight : device === 'tablet' ? HomeBannerTabletLight : HomeBannerDesktopLight,
             dark: device === 'mobile' ? HomeBannerMobileDark : device === 'tablet' ? HomeBannerTabletDark : HomeBannerDesktopDark,
           }}
           title='Boas-vindas ao #CodeChella2023!'

@@ -14,7 +14,7 @@ export function About() {
           light: '5 pessoas em uma plateia de um festival de músicas',
           dark: 'Um palco com luzes de néon e 3 homens tocando guitarra',
         }}
-        className='w-full max-w-[610px] h-96 object-cover rounded-2xl'
+        className='w-full max-w-[610px] rounded-2xl'
       />
 
       <div className='flex flex-col items-center gap-6 xl:w-[540px] text-grey dark:text-white text-center'>
