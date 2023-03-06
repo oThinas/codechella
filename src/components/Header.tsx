@@ -23,11 +23,13 @@ export function Header() {
       {
         device !== 'mobile' ? (
           <ul className='flex text-white w-full justify-between xl:max-w-xl'>
-            {menuItems.map((item, index) => (
-              <li key={index}>
-                <Link href={item.href} bold>{item.label}</Link>
-              </li>
-            ))}
+            {menuItems.map((item, index) => {
+              return (
+                <li key={index}>
+                  <Link href={item.href} bold>{item.label}</Link>
+                </li>
+              );
+            })}
           </ul>
         ) : (
           <DropdownMenu items={menuItems}/>
