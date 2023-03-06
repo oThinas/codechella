@@ -5,5 +5,6 @@ export interface IImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   source: { light: string; dark: string };
   desc: { light: string; dark: string };
   isBackground?: boolean;
+  divClassName?: string;
   filter?: IFilter;
 }

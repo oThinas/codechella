@@ -9,7 +9,7 @@ export function Image(props: IImageProps) {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <div className={` w-full ${props.isBackground ? 'absolute' : 'relative'}`}>
+    <div className={twMerge(`w-full ${props.isBackground ? 'absolute' : 'relative'} ${props.divClassName || ''}`)}>
       <img
         src={props.source[theme]}
         alt={props.desc[theme]}

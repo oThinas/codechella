@@ -2,7 +2,7 @@ import { AnchorHTMLAttributes, ReactNode, useEffect, useState } from 'react';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
 import { twMerge } from 'tailwind-merge';
 
-import { Text } from './Text';
+import { Text } from '.';
 
 import { ITextProps } from '../interfaces';
 
