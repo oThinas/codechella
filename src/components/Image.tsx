@@ -13,7 +13,7 @@ export function Image(props: IImageProps) {
       <img
         src={props.source[theme]}
         alt={props.desc[theme]}
-        className={`w-full h-[270px] md:h-[384px] xl:h-[407px] object-cover m-auto ${props.className || ''}`}
+        className={twMerge(`w-full h-[270px] md:h-[384px] xl:h-[407px] object-cover m-auto ${props.className || ''}`)}
       />
       <div
         className={twMerge(`w-full h-auto absolute top-0 left-0
