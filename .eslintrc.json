@@ -178,6 +178,9 @@
       }
     ]
   },
+  // React
+  "react/display-name": "off",
+
   "globals": {
     "JSX": true
   }

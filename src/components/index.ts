@@ -1,3 +1,4 @@
+export { Accordion } from './Accordion';
 export { BandList } from './BandList';
 export { Banner } from './Banner';
 export { Button } from './Button';
@@ -11,6 +12,7 @@ export { Link } from './Link';
 export { Logo } from './Logo';
 export { Main } from './Main';
 export { Paragraph } from './Paragraph';
+export { ScrollToTop } from './ScrollToTop';
 export { Section } from './Section';
 export { Text } from './Text';
 export { ToggleThemeButton } from './ToggleThemeButton';

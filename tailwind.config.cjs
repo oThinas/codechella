@@ -22,6 +22,20 @@ module.exports = {
         'experience-banner-tablet': 'url(/experience-banner-tablet.png)',
         'experience-banner-desktop': 'url(/experience-banner-desktop.png)',
       },
+      keyframes: {
+        slideDown: {
+          from: { height: 0 },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        slideUp: {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: 0 },
+        },
+      },
+      animation: {
+        slideDown: 'slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+        slideUp: 'slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1)',
+      },
     },
     fontSize: {
       base: ['1.25rem', '1.75rem'],

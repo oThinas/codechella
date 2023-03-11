@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { Banner, Heading, Main, Section } from '../../components';
+import { Accordion, Banner, Heading, Main, Section } from '../../components';
 
 import { DeviceContext } from '../../contexts/DeviceContex';
 
@@ -30,6 +30,8 @@ export function Info() {
         <Heading heading='h2' size={32} font='title' className='text-center'>
           Perguntas Frequentes:
         </Heading>
+
+        <Accordion />
       </Section>
     </Main>
   );
