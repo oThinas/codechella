@@ -20,37 +20,35 @@ export function Home() {
   const { device } = useContext(DeviceContext);
 
   return (
-    <div className='flex-1'>
-      <Main>
-        <Banner
-          source={{
-            light: device === 'mobile' ? HomeBannerMobileLight : device === 'tablet' ? HomeBannerTabletLight : HomeBannerDesktopLight,
-            dark: device === 'mobile' ? HomeBannerMobileDark : device === 'tablet' ? HomeBannerTabletDark : HomeBannerDesktopDark,
-          }}
-          title='Boas-vindas ao #CodeChella2023!'
-          desc={{
-            light: 'Um carrossel num parque de diversões',
-            dark: 'Aurora Boreal',
-          }}
-        />
+    <Main>
+      <Banner
+        source={{
+          light: device === 'mobile' ? HomeBannerMobileLight : device === 'tablet' ? HomeBannerTabletLight : HomeBannerDesktopLight,
+          dark: device === 'mobile' ? HomeBannerMobileDark : device === 'tablet' ? HomeBannerTabletDark : HomeBannerDesktopDark,
+        }}
+        title='Boas-vindas ao #CodeChella2023!'
+        desc={{
+          light: 'Um carrossel num parque de diversões',
+          dark: 'Aurora Boreal',
+        }}
+      />
 
-        <About />
+      <About />
 
-        <Lineup />
+      <Lineup />
 
-        <Image
-          source={{ light: FooterLight, dark: FooterDark }}
-          desc={{
-            light: 'Light',
-            dark: 'Dark',
-          }}
-          className='w-full h-[338px] object-cover'
-          filter={{
-            light: { bgColor: 'bg-coral-dark', opacity: 'opacity-30' },
-            dark: { bgColor: 'dark:bg-grey-dark', opacity: 'opacity-50' },
-          }}
-        />
-      </Main>
-    </div>
+      <Image
+        source={{ light: FooterLight, dark: FooterDark }}
+        desc={{
+          light: 'Light',
+          dark: 'Dark',
+        }}
+        className='w-full h-[338px] object-cover'
+        filter={{
+          light: { bgColor: 'bg-coral-dark', opacity: 'opacity-30' },
+          dark: { bgColor: 'dark:bg-grey-dark', opacity: 'opacity-50' },
+        }}
+      />
+    </Main>
   );
 }

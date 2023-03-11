@@ -25,6 +25,7 @@ export function Banner(props: IBannerProps) {
         source={props.source}
         desc={props.desc}
         className={twMerge(`${props.className || ''}`)}
+        filter={props.filter}
       />
 
       <Heading

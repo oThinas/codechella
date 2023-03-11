@@ -7,7 +7,7 @@ import { DeviceContext } from '../contexts/DeviceContex';
 const menuItems = [
   { label: 'A experiência', href: '/experiencia' },
   { label: 'Mapa de Setores', href: '/mapa-de-setores' },
-  { label: 'Informações', href: '#' },
+  { label: 'Informações', href: '/informacoes' },
   { label: 'Ingresso', href: '#' },
 ];
 

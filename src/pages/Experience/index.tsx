@@ -16,98 +16,96 @@ export function Experience() {
   const { device } = useContext(DeviceContext);
 
   return (
-    <div className='flex-1 text-grey dark:text-white'>
-      <Main>
-        <Banner
-          source={{
-            light: device === 'mobile' ? ExperienceBannerMobile : device === 'tablet' ? ExperienceBannerTablet : ExperienceBannerDesktop,
-            dark: device === 'mobile' ? ExperienceBannerMobile : device === 'tablet' ? ExperienceBannerTablet : ExperienceBannerDesktop,
-          }}
-          title='A Experiência'
-          desc={{
-            light: 'A Experiência',
-            dark: 'A Experiência',
-          }}
-          className='opacity-60'
-        />
+    <Main>
+      <Banner
+        source={{
+          light: device === 'mobile' ? ExperienceBannerMobile : device === 'tablet' ? ExperienceBannerTablet : ExperienceBannerDesktop,
+          dark: device === 'mobile' ? ExperienceBannerMobile : device === 'tablet' ? ExperienceBannerTablet : ExperienceBannerDesktop,
+        }}
+        title='A Experiência'
+        desc={{
+          light: 'A Experiência',
+          dark: 'A Experiência',
+        }}
+        className='opacity-60'
+      />
 
-        <Section className='text-center xl:flex-col md:gap-16 xl:gap-32'>
-          <div className='flex flex-col xl:flex-row items-center gap-8 xl:gap-12'>
-            <Image
-              source={{
-                light: Experience1,
-                dark: Experience1,
-              }}
-              desc={{
-                light: 'Mulher negra com uma roupa cintilante em azul sorrindo com os braços para cima',
-                dark: 'Mulher negra com uma roupa cintilante em azul sorrindo com os braços para cima',
-              }}
-              className='rounded-2xl w-full h-[381px] xl:h-[381px]'
-              divClassName='xl:w-1/2'
-            />
+      <Section className='text-center xl:flex-col md:gap-16 xl:gap-32'>
+        <div className='flex flex-col xl:flex-row items-center gap-8 xl:gap-12'>
+          <Image
+            source={{
+              light: Experience1,
+              dark: Experience1,
+            }}
+            desc={{
+              light: 'Mulher negra com uma roupa cintilante em azul sorrindo com os braços para cima',
+              dark: 'Mulher negra com uma roupa cintilante em azul sorrindo com os braços para cima',
+            }}
+            className='rounded-2xl w-full h-[381px] xl:h-[381px]'
+            divClassName='xl:w-1/2'
+          />
 
-            <div className='xl:w-1/2 xl:text-left xl:flex xl:flex-col xl:gap-6'>
-              <Heading heading='h2' size={32} bold>
+          <div className='xl:w-1/2 xl:text-left xl:flex xl:flex-col xl:gap-6'>
+            <Heading heading='h2' size={32} bold>
                 Acessibilidade e Inclusão
-              </Heading>
+            </Heading>
 
-              <Paragraph className='leading-10'>
+            <Paragraph className='leading-10'>
                 Nosso evento tenta abraçar um público mais amplo em todos os sentidos, de todas as idades, corpos, gostos e pensamentos!  Isso está presente no  espaço físico, na sinalização, no treinamento da equipe de apoio, na comunicação em libras, braile, visual e tátil. Além disso, dispomos de ingressos gratuitos para pessoas com deficiência e acompanhantes, pessoas idosas e crianças!
-              </Paragraph>
-            </div>
+            </Paragraph>
           </div>
+        </div>
 
-          <div className='flex flex-col xl:flex-row-reverse items-center gap-8'>
-            <Image
-              source={{
-                light: Experience2,
-                dark: Experience2,
-              }}
-              desc={{
-                light: 'Uma ecobag de lixos recicláveis',
-                dark: 'Uma ecobag de lixos recicláveis',
-              }}
-              className='rounded-2xl w-full h-[381px]'
-              divClassName='xl:w-1/2'
-            />
+        <div className='flex flex-col xl:flex-row-reverse items-center gap-8'>
+          <Image
+            source={{
+              light: Experience2,
+              dark: Experience2,
+            }}
+            desc={{
+              light: 'Uma ecobag de lixos recicláveis',
+              dark: 'Uma ecobag de lixos recicláveis',
+            }}
+            className='rounded-2xl w-full h-[381px]'
+            divClassName='xl:w-1/2'
+          />
 
-            <div className='xl:w-1/2 xl:text-right xl:flex xl:flex-col xl:gap-6'>
-              <Heading heading='h2' size={32} bold>
+          <div className='xl:w-1/2 xl:text-right xl:flex xl:flex-col xl:gap-6'>
+            <Heading heading='h2' size={32} bold>
                 Sustentabilidade
-              </Heading>
+            </Heading>
 
-              <Paragraph className='leading-10'>
+            <Paragraph className='leading-10'>
                 Queremos estar aqui celebrando daqui a 50, 100 anos! Por isso, levamos o futuro do nosso planeta a sério. Nosso festival é carbono zero, com utilização de copos retornáveis, coleta e destinação adequada de resíduos, e transporte coletivo.
-              </Paragraph>
-            </div>
+            </Paragraph>
           </div>
+        </div>
 
-          <div className='flex flex-col xl:flex-row items-center gap-8'>
-            <Image
-              source={{
-                light: Experience3,
-                dark: Experience3,
-              }}
-              desc={{
-                light: 'Roda gigante',
-                dark: 'Roda gigante',
-              }}
-              className='rounded-2xl w-full h-[381px]'
-              divClassName='xl:w-1/2'
-            />
+        <div className='flex flex-col xl:flex-row items-center gap-8'>
+          <Image
+            source={{
+              light: Experience3,
+              dark: Experience3,
+            }}
+            desc={{
+              light: 'Roda gigante',
+              dark: 'Roda gigante',
+            }}
+            className='rounded-2xl w-full h-[381px]'
+            divClassName='xl:w-1/2'
+          />
 
-            <div className='xl:w-1/2 xl:text-left xl:flex xl:flex-col xl:gap-6'>
-              <Heading heading='h2' size={32} bold>
+          <div className='xl:w-1/2 xl:text-left xl:flex xl:flex-col xl:gap-6'>
+            <Heading heading='h2' size={32} bold>
                 Atrações
-              </Heading>
+            </Heading>
 
-              <Paragraph className='leading-10'>
+            <Paragraph className='leading-10'>
                 Intervenções artísticas e culturais para todos os gostos! Durante os intervalos dos shows, nossa experiência contará com recreação para crianças, oficina de cerâmica, origami, circo e aquarela! Além disso, nosso espaço contra com 3 praças de alimentação, roda gigante e outros brinquedos!
-              </Paragraph>
-            </div>
+            </Paragraph>
           </div>
-        </Section>
-      </Main>
-    </div>
+        </div>
+      </Section>
+    </Main>
   );
 }

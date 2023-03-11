@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import { Experience, Home, SectorMap } from './pages';
+import { Experience, Home, Info, SectorMap } from './pages';
 
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
@@ -25,6 +25,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             <Route path='/' element={<Home />} />
             <Route path='/experiencia' element={<Experience />} />
             <Route path='/mapa-de-setores' element={<SectorMap />} />
+            <Route path='/informacoes' element={<Info />} />
           </Routes>
 
           <Footer />

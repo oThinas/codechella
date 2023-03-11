@@ -16,7 +16,7 @@ export function Image(props: IImageProps) {
         className={twMerge(`w-full h-[270px] md:h-[384px] xl:h-[407px] object-cover m-auto ${props.className || ''}`)}
       />
       <div
-        className={twMerge(`w-full h-auto absolute top-0 left-0
+        className={twMerge(`w-full h-full absolute top-0 left-0
         ${props.filter?.light.bgColor} ${props.filter?.dark.bgColor} ${props.filter?.light.opacity} ${props.filter?.dark.opacity}`)}
       />
     </div>
