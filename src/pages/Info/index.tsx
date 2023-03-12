@@ -26,7 +26,7 @@ export function Info() {
         className='opacity-60'
       />
 
-      <Section className='py-12'>
+      <Section className='py-12 xl:flex-col'>
         <Heading heading='h2' size={32} font='title' className='text-center'>
           Perguntas Frequentes:
         </Heading>

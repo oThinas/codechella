@@ -79,7 +79,7 @@ const AccordionTrigger = forwardRef<HTMLButtonElement, AccordionTriggerProps>(({
   return (
     <RadixAccordion.Header className='flex justify-between p-4 bg-blue dark:bg-blue-dark'>
       <RadixAccordion.Trigger
-        className={twMerge(`flex group items-center text-start ${className || ''}`)}
+        className={twMerge(`flex group w-full justify-between items-center text-start ${className || ''}`)}
         {...props}
         ref={fowardedRef}
       >
