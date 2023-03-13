@@ -4,8 +4,11 @@ import { Button, Heading, Image, Paragraph, Section, Text } from '../../../compo
 
 import AboutLightImage from '../../../../assets/images/about-light.jpg';
 import AboutDarkImage from '../../../../assets/images/about-dark.jpg';
+import { useNavigate } from 'react-router-dom';
 
 export function About() {
+  const navigate = useNavigate();
+  
   return (
     <Section>
       <Image
@@ -26,7 +29,7 @@ export function About() {
           Hora de programar nossa memória com novas lembranças! Uma nova experiência sobre música, linguagens e, claro, tecnologia! Somos um festival diverso, com vários artistas e referências. Divirta-se!
         </Paragraph>
 
-        <Button icon={<IoTicketOutline size={24}/>}> {/* // TODO: adicionar redirecionamento */}
+        <Button icon={<IoTicketOutline size={24}/>} onClick={() => navigate('/ingresso')}>
           <Text>
             Comprar ingresso!
           </Text>

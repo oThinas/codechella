@@ -8,7 +8,7 @@ const menuItems = [
   { label: 'A experiência', href: '/experiencia' },
   { label: 'Mapa de Setores', href: '/mapa-de-setores' },
   { label: 'Informações', href: '/informacoes' },
-  { label: 'Ingresso', href: '#' },
+  { label: 'Ingresso', href: '/ingresso' },
 ];
 
 export function Header() {

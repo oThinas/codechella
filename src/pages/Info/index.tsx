@@ -22,7 +22,7 @@ export function Info() {
           dark: 'Uma plateia vibrando com a música de um artista que está no palco. O palco está tão iluminado que só é possível ver o chão',
         }}
         title='Informações Gerais'
-        filter={{ light: { bgColor: '', opacity: 'opacity-0' }, dark: { bgColor: 'bg-black', opacity: 'opacity-20' } }}
+        filter={{ light: { bgColor: '', opacity: 'opacity-0' }, dark: { bgColor: 'dark:bg-black', opacity: 'dark:opacity-20' } }}
         className='opacity-60'
       />
 

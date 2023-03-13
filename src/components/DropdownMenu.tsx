@@ -9,7 +9,7 @@ interface IDropdownMenuProps {
 export function DropdownMenu(props: IDropdownMenuProps) {
   const itemsElement = props.items.map((item, index) => {
     return (
-      <Dropdown.Item  key={index} className='px-8 py-4 outline-none'>
+      <Dropdown.Item key={index} className='px-8 py-4 outline-none'>
         <Link href={item.href} bold className='hover:no-underline'>
           {item.label}
         </Link>

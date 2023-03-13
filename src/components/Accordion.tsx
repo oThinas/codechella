@@ -29,7 +29,7 @@ export function Accordion() {
           Qual é a classificação etária?
         </AccordionTrigger>
         <AccordionContent>
-          A partir de 16 anos, todo mundo pode entrar. De 13 a 15 anos, tem que estar acompanhado dos pais ou responsáveis legais. Menores de 10 anos não podem entrar.
+          A partir de 16 anos, todo mundo pode entrar. De 13 a 15 anos, tem que estar acompanhado dos pais ou responsáveis legais. Menores de 13 anos não podem entrar.
         </AccordionContent>
       </AccordionItem>
 

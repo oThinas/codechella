@@ -52,6 +52,7 @@ module.exports = {
     colors: {
       white: '#FFF',
       black: '#000',
+      red: '#B91C1C',
       'light-gradient': {
         start: '#BFDAE6',
         via: '#FCF0DD',
