@@ -164,6 +164,7 @@
     ],
     // Typescript
     "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/naming-convention": [
       "error",
       {
@@ -176,11 +177,15 @@
           "match": true
         }
       }
-    ]
+    ],
+    "react/display-name": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   // React
-  "react/display-name": "off",
-
   "globals": {
     "JSX": true
   }

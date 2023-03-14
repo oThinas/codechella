@@ -12,7 +12,7 @@ import TicketBannerDesktop from '../../../assets/images/ticket-banner-desktop.pn
 
 export function Ticket() {
   const { device } = useContext(DeviceContext);
-  
+
   return (
     <Main>
       <Banner
@@ -22,7 +22,7 @@ export function Ticket() {
         }}
         desc={{
           light: 'Fotos do céu com objetos de circo como bamboles e pinos de boliche jogados para cima.',
-          dark: 'Fotos do céu com objetos de circo como bamboles e pinos de boliche jogados para cima.'
+          dark: 'Fotos do céu com objetos de circo como bamboles e pinos de boliche jogados para cima.',
         }}
         title='Garanta seu Ingresso'
         filter={{ light: { bgColor: '', opacity: 'opacity-0' }, dark: { bgColor: 'dark:bg-black', opacity: 'dark:opacity-20' } }}

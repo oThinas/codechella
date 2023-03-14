@@ -18,6 +18,7 @@ export function TicketForm() {
 
   function onSubmit(data: ITicketFormData) {
     setSubmitting(true);
+    console.log(errors);
     setTimeout(() => {
       setSubmitting(false);
     }, 2000);
@@ -78,38 +79,38 @@ export function TicketForm() {
       </Label>
 
       <div className='w-full xl:flex xl:gap-6 xl:justify-center'>
-          <Label>
-            <Text size={32} bold>
+        <Label>
+          <Text size={32} bold>
               Tipo de ingresso:
-            </Text>
-            <select
-              defaultValue=''
-              className={`font-body text-grey w-full h-12 px-2 rounded-lg focus-within:ring-2 ring-blue outline-none
+          </Text>
+          <select
+            defaultValue=''
+            className={`font-body text-grey w-full h-12 px-2 rounded-lg focus-within:ring-2 ring-blue outline-none
                 ${errors.ticketType ? 'ring-2 ring-red dark:ring-grey' : ''}`}
-              {...register('ticketType', { required: true })}
-            >
-              <option value='' disabled>Tipo de ingresso</option>
-              <option value='premium'>Pista Premium</option>
-              <option value='regular'>Pista Regular</option>
-              <option value='floor'>Cadeiras Térreo</option>
-              <option value='roof'>Cadeiras Superior</option>
-            </select>
-            {errors.ticketType && <Text className='text-red dark:text-grey'>Selecione um tipo de ingresso</Text>}
-          </Label>
+            {...register('ticketType', { required: true })}
+          >
+            <option value='' disabled>Tipo de ingresso</option>
+            <option value='premium'>Pista Premium</option>
+            <option value='regular'>Pista Regular</option>
+            <option value='floor'>Cadeiras Térreo</option>
+            <option value='roof'>Cadeiras Superior</option>
+          </select>
+          {errors.ticketType && <Text className='text-red dark:text-grey'>Selecione um tipo de ingresso</Text>}
+        </Label>
 
-          <Label>
-            <Text size={32} bold>
+        <Label>
+          <Text size={32} bold>
               Data de nascimento:
-            </Text>
-            <Input
-              type='date'
-              name='dateOfBirth'
-              register={register}
-              rules={{ required: true, valueAsDate: true, validate: (value: string) => isDateAtLeast13YearsAgo(value) }}
-              className={errors.dateOfBirth ? 'ring-2 ring-red dark:ring-grey' : ''}
-            />
-            {errors.dateOfBirth && <Text className='text-red dark:text-grey'>Data inválida</Text>}
-          </Label>
+          </Text>
+          <Input
+            type='date'
+            name='dateOfBirth'
+            register={register}
+            rules={{ required: true, valueAsDate: true, validate: (value: string) => isDateAtLeast13YearsAgo(value) }}
+            className={errors.dateOfBirth ? 'ring-2 ring-red dark:ring-grey' : ''}
+          />
+          {errors.dateOfBirth && <Text className='text-red dark:text-grey'>Data inválida</Text>}
+        </Label>
       </div>
 
       <Button type='submit' disabled={submitting} icon={<ArrowRightIcon width={32} height={32} />} className='max-w-xs w-80 self-center'>
