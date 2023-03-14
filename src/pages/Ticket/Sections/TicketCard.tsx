@@ -32,7 +32,7 @@ export function TicketCard({ data }: { data: ITicketFormData }) {
           }}
         />
       </div>
-      <div className='flex flex-col xl:flex-row gap-8 w-full'>
+      <div className='flex flex-col xl:flex-row items-center gap-8 w-full'>
         <Image
           divClassName='max-w-[200px] max-h-[200px]'
           className='max-w-[200px] max-h-[200px]'

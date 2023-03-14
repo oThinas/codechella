@@ -73,7 +73,7 @@ export function TicketForm({ dataSubmit }: { dataSubmit: (data: ITicketFormData)
         {errors.email && <Text className='text-red dark:text-grey'>Email inválido</Text>}
       </Label>
 
-      <div className='w-full xl:flex xl:gap-6 xl:justify-center'>
+      <div className='w-full flex flex-col xl:flex-row gap-8 xl:gap-6 xl:justify-center'>
         <Label>
           <Text size={32} bold>
               Tipo de ingresso:
