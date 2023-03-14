@@ -1,25 +1,20 @@
 import { ReactNode, useState } from 'react';
 import { useForm, UseFormRegister } from 'react-hook-form';
-import { ArrowRightIcon } from '@radix-ui/react-icons';
-
-import { Button, Text } from '../../../components';
+import { ArrowRightIcon, ReloadIcon } from '@radix-ui/react-icons';
 import { twMerge } from 'tailwind-merge';
 
-interface ITicketFormData {
-  fullName: string,
-  email: string,
-  ticketType: 'premium' | 'regular' | 'floor' | 'roof',
-  dateOfBirth: string,
-}
+import { Button, Text } from '../../../components';
 
-export function TicketForm() {
+import { ITicketFormData } from '../../../interfaces';
+
+export function TicketForm({ dataSubmit }: { dataSubmit: (data: ITicketFormData) => void }) {
   const [submitting, setSubmitting] = useState(false);
   const { register, handleSubmit, formState: { errors } } = useForm<ITicketFormData>();
 
   function onSubmit(data: ITicketFormData) {
     setSubmitting(true);
-    console.log(errors);
     setTimeout(() => {
+      dataSubmit(data);
       setSubmitting(false);
     }, 2000);
   }
@@ -113,7 +108,12 @@ export function TicketForm() {
         </Label>
       </div>
 
-      <Button type='submit' disabled={submitting} icon={<ArrowRightIcon width={32} height={32} />} className='max-w-xs w-80 self-center'>
+      <Button
+        type='submit'
+        disabled={submitting}
+        icon={submitting ? (<ReloadIcon className='animate-spin' width={32} height={32}/>) : (<ArrowRightIcon width={32} height={32} />)}
+        className='max-w-xs w-80 self-center'
+      >
         Enviar
       </Button>
     </form>
