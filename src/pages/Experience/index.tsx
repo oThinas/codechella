@@ -101,7 +101,7 @@ export function Experience() {
             </Heading>
 
             <Paragraph className='leading-10'>
-                Intervenções artísticas e culturais para todos os gostos! Durante os intervalos dos shows, nossa experiência contará com recreação para crianças, oficina de cerâmica, origami, circo e aquarela! Além disso, nosso espaço contra com 3 praças de alimentação, roda gigante e outros brinquedos!
+                Intervenções artísticas e culturais para todos os gostos! Durante os intervalos dos shows, nossa experiência contará com recreação para crianças, oficina de cerâmica, origami, circo e aquarela! Além disso, nosso espaço conta com 3 praças de alimentação, roda gigante e outros brinquedos!
             </Paragraph>
           </div>
         </div>
